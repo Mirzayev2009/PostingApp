@@ -15,6 +15,7 @@ import {
 } from "../../components/ui/form"
 import { Checkbox } from "../../components/ui/checkbox"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 const formSchema = z.object({
   email: z.string().email("Please enter a valid email."),
@@ -38,10 +39,15 @@ export default function LoginPage() {
   
   
 
+  const navigate = useNavigate()
 
   const onSubmit = (data) => {
     console.log("Login data:", data)
     setInfo(data)
+    if (data) {
+      navigate("/create")
+    }
+
   }
 
   return (
@@ -109,14 +115,14 @@ export default function LoginPage() {
                   </FormItem>
                 )}
               />
-              <a href="#" className="text-sm text-blue-700 hover:underline">
+              <a href="#" className="text-sm text-teal-700 hover:underline">
                 Forgot password?
               </a>
             </div>
 
             <Button
               type="submit"
-              className="w-full h-12 text-lg bg-blue-800 hover:bg-blue-600 text-white"
+              className="w-full h-12 text-lg bg-teal-800 hover:bg-teal-600 text-white"
             >
               Log In
             </Button>
@@ -142,7 +148,7 @@ export default function LoginPage() {
 
         <div className="text-center text-sm text-gray-600">
           Don’t have an account?{" "}
-          <a href="#" className="text-blue-800 hover:underline font-medium">
+          <a href="#" className="text-teal-800 hover:underline font-medium">
             Sign up
           </a>
         </div>

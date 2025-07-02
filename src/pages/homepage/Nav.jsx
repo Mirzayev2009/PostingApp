@@ -15,7 +15,7 @@ const Nav = () => {
     <nav className="w-full bg-gray-100 shadow-md fixed top-0 left-0 z-50">
       <div className="max-w-8xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="text-2xl font-bold text-blue-800 tracking-tight">
+        <a href="#" className="text-2xl font-bold text-teal-700 tracking-tight">
           logo
         </a>
 
@@ -25,7 +25,7 @@ const Nav = () => {
             <li key={label}>
               <a
                 href={href}
-                className="hover:text-blue-800 transition-colors"
+                className="hover:text-teal-700 transition-colors"
               >
                 {label}
               </a>
@@ -51,7 +51,7 @@ const Nav = () => {
               <li key={label}>
                 <a
                   href={href}
-                  className="hover:text-blue-800 transition-colors block"
+                  className="hover:text-teal-700 transition-colors block"
                   onClick={() => setMenuOpen(false)} // close menu after click
                 >
                   {label}

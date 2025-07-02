@@ -1,36 +1,12 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
-const stories = [
-  {
-    id: 1,
-    image: "/images/story-1.jpg",
-    category: "Design",
-    date: "June 25, 2025",
-    title: "My Design Process: From Concept to Completion",
-    excerpt:
-      "A detailed look at how I approach new design projects, including research, wireframing, prototyping, and client collaboration.",
-  },
-  {
-    id: 2,
-    image: "/images/story-2.jpg",
-    category: "UX/UI",
-    date: "June 18, 2025",
-    title: "5 UX Principles That Transformed My Design Approach",
-    excerpt:
-      "Exploring the fundamental UX principles that have significantly improved my design work and client satisfaction.",
-  },
-  {
-    id: 3,
-    image: "/images/story-3.jpg",
-    category: "Development",
-    date: "June 10, 2025",
-    title: "Creative Coding: Where Art Meets Technology",
-    excerpt:
-      "My journey into creative coding and how it has influenced my approach to both design and problem solving.",
-  },
-]
 
 const Stories = () => {
+
+  const stories = JSON.parse(localStorage.getItem('stories'))
+
+
   return (
     <section className="bg-white py-20 px-4" id="stories">
       <div className="max-w-7xl mx-auto text-center">
@@ -43,13 +19,13 @@ const Stories = () => {
           {stories.map((story) => (
             <div key={story.id} className="bg-white rounded-xl shadow-md overflow-hidden text-left">
               <img
-                src={story.image}
+                src={story.featuredImage}
                 alt={story.title}
                 className="w-full h-56 object-cover"
               />
               <div className="p-6">
                 <div className="flex justify-between items-center text-sm text-gray-500 mb-2">
-                  <span className="bg-gray-100 text-blue-800 px-3 py-1 rounded-full font-medium">
+                  <span className="bg-gray-100 text-teal-700 px-3 py-1 rounded-full font-medium">
                     {story.category}
                   </span>
                   <span>{story.date}</span>
@@ -60,7 +36,7 @@ const Stories = () => {
                 <p className="text-gray-600 text-sm mb-4">
                   {story.excerpt}
                 </p>
-                <a href="#" className="text-blue-800 text-sm font-medium hover:underline inline-flex items-center">
+                <a href="#" className="text-teal-700 text-sm font-medium hover:underline inline-flex items-center">
                   Read more <span className="ml-1">→</span>
                 </a>
               </div>
@@ -69,9 +45,12 @@ const Stories = () => {
         </div>
 
         <div className="mt-12">
-          <button className="px-6 py-3 text-blue-800 border border-blue-800 rounded-lg font-medium hover:bg-blue-800 hover:text-white transition">
+         
+         <Link to="/stories">
+          <button className="px-6 py-3 text-teal-700 border border-teal-700 rounded-lg font-medium hover:bg-teal-700 hover:text-white transition">
             View All Stories
           </button>
+         </Link>
         </div>
       </div>
     </section>

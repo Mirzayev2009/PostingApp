@@ -18,10 +18,10 @@ const Header = () => {
         </p>
 
         <div className="flex flex-wrap gap-4">
-          <button className="bg-blue-800 hover:bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow transition">
+          <button className="bg-teal-700 hover:bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow transition">
             View Portfolio
           </button>
-          <button className="bg text-white hover:text-blue-800 px-6 py-3 rounded-lg text-lg font-semibold border shadow transition opacity-95">
+          <button className="bg text-white hover:text-teal-700 px-6 py-3 rounded-lg text-lg font-semibold border shadow transition opacity-95">
            <p className="opacity-100"> Read Stories</p>
           </button>
         </div>

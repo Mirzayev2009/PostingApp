@@ -16,7 +16,6 @@ const Homepage = () => {
         <Stories/>
         <AboutMe/>
         <GetInTouch/>
-        <Footer/>
     </div>
   )
 }

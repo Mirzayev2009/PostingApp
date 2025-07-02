@@ -4,14 +4,14 @@ import Masonry from "react-masonry-css"
 const categories = ["All", "UX/UI Design", "Development", "Branding", "Photography"]
 
 const portfolioItems = [
-  { id: 1, category: "UX/UI Design", image: "/images/ui-1.jpg" },
-  { id: 2, category: "Development", image: "/images/dev-1.jpg" },
-  { id: 3, category: "Branding", image: "/images/brand-1.jpg" },
-  { id: 4, category: "Photography", image: "/images/photo-1.jpg" },
-  { id: 5, category: "Development", image: "/images/dev-2.jpg" },
-  { id: 6, category: "Photography", image: "/images/photo-2.jpg" },
-  { id: 7, category: "UX/UI Design", image: "/images/ui-2.jpg" },
-  { id: 8, category: "Branding", image: "/images/brand-2.jpg" },
+  { id: 1, category: "UX/UI Design", image: "https://picsum.photos/400/300?1" },
+  { id: 2, category: "Development", image: "https://picsum.photos/400/300?2" },
+  { id: 3, category: "Branding", image: "https://picsum.photos/400/300?3" },
+  { id: 4, category: "Photography", image: "https://picsum.photos/400/300?4" },
+  { id: 5, category: "Development", image: "https://picsum.photos/400/300?5" },
+  { id: 6, category: "Photography", image: "https://picsum.photos/400/300?6" },
+  { id: 7, category: "UX/UI Design", image: "https://picsum.photos/400/300?7" },
+  { id: 8, category: "Branding", image: "https://picsum.photos/400/300?8" },
 ]
 
 const breakpointColumnsObj = {
@@ -24,10 +24,8 @@ const breakpointColumnsObj = {
 const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState("All")
 
-  const filteredItems =
-    selectedCategory === "All"
-      ? portfolioItems
-      : portfolioItems.filter((item) => item.category === selectedCategory)
+const filteredItems = selectedCategory === "All"
+? portfolioItems : portfolioItems.filter((item)=> item.category === selectedCategory)
 
   return (
     <section className="bg-gray-50 py-20 px-4" id="portfolio">
@@ -46,7 +44,7 @@ const Portfolio = () => {
               onClick={() => setSelectedCategory(cat)}
               className={`px-4 py-2 rounded-lg border text-lg font-medium transition ${
                 selectedCategory === cat
-                  ? "bg-blue-800 text-white border-blue-800"
+                  ? "bg-teal-700 text-white border-teal-700"
                   : "bg-white text-gray-700 hover:bg-gray-100 border-gray-300"
               }`}
             >

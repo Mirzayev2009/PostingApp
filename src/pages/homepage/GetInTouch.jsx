@@ -105,13 +105,13 @@ const GetInTouch = () => {
               name="subscribe"
               checked={formData.subscribe}
               onChange={handleChange}
-              className="accent-blue-800"
+              className="accent-teal-700"
             />
             <span>Subscribe to my newsletter for design tips and updates</span>
           </label>
           <button
             type="submit"
-            className="w-full bg-blue-800 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition"
+            className="w-full bg-teal-700 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition"
           >
             Send Message
           </button>

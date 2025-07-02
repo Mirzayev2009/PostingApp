@@ -7,7 +7,7 @@ const AboutMe = () => {
         {/* Profile Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/images/profile.jpg"
+            src="https://picsum.photos/400/300?8"
             alt="Profile"
             className="rounded-2xl w-full object-cover shadow-lg"
           />
@@ -58,13 +58,13 @@ const AboutMe = () => {
             <a
               href="/resume.pdf"
               download
-              className="bg-blue-800 hover:bg-blue-950 text-white px-6 py-3 rounded-lg font-semibold transition"
+              className="bg-teal-700 hover:bg-blue-950 text-white px-6 py-3 rounded-lg font-semibold transition"
             >
               Download Resume
             </a>
             <a
               href="#contact"
-              className="border border-blue-800 text-blue-800 hover:bg-blue-800 hover:text-white px-6 py-3 rounded-lg font-semibold transition"
+              className="border border-teal-700 text-teal-700 hover:bg-teal-700 hover:text-white px-6 py-3 rounded-lg font-semibold transition"
             >
               Get in Touch
             </a>
