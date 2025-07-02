@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 const Stories = () => {
 
-  const stories = JSON.parse(localStorage.getItem('stories'))
+  const stories = JSON.parse(localStorage.getItem('stories') || "[]")
 
 
   return (
